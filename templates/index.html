@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nurtura — Parenting Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>👶 Nurtura — Parenting Chatbot</h1>
+  <form method="POST">
+    <label for="user_input">Chat with Nurtura Bot</label><br>
+    <textarea name="user_input" required></textarea><br>
+    <input type="submit" value="Ask Nurtura Bot">
+  </form>
+  {% if response %}
+    <div class="response">
+      <strong>Nurtura says:</strong><br>
+      {{ response }}
+    </div>
+  {% endif %}
+</body>
+</html>
